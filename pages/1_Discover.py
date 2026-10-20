@@ -31,6 +31,11 @@ if st.button("Find Potentially Relevant AEs", type="primary"):
         )
 
         st.markdown("### AE001 - Alex Tan")
+
+        select_ae001 = st.checkbox(
+            "Select Alex Tan for comparison",
+            key="ae001"
+        )
         st.write("**Sub-sector:** Children & Youth")
         st.write("**Expertise:** Youth Work, Counselling")
         st.write("**Training Experience:** 12 years")
@@ -39,6 +44,11 @@ if st.button("Find Potentially Relevant AEs", type="primary"):
         st.divider()
 
         st.markdown("### AE002 - Jamie Lim")
+
+        select_ae002 = st.checkbox(
+            "Select Jamie Lim for comparison",
+            key="ae002"
+        )
         st.write("**Sub-sector:** Children & Youth")
         st.write("**Expertise:** Trauma-Informed Practice")
         st.write("**Training Experience:** 8 years")
@@ -47,6 +57,10 @@ if st.button("Find Potentially Relevant AEs", type="primary"):
         st.divider()
 
         st.markdown("### AE003 - Taylor Lee")
+        select_ae003 = st.checkbox(
+            "Select Taylor Lee for comparison",
+            key="ae003"
+        )
         st.write("**Sub-sector:** Family")
         st.write("**Expertise:** Family Violence, Case Management")
         st.write("**Training Experience:** 10 years")
