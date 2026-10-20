@@ -70,5 +70,26 @@ if st.session_state.search_done:
         st.write("**Expertise:** Family Violence, Case Management")
         st.write("**Training Experience:** 10 years")
         st.write("**AE Effectiveness:** 96%")
+        st.divider()
 
+        selected_aes = []
+
+        if select_ae001:
+            selected_aes.append("Alex Tan")
+
+        if select_ae002:
+            selected_aes.append("Jamie Lim")
+
+        if select_ae003:
+            selected_aes.append("Taylor Lee")
+
+        if st.button("Compare Selected AEs"):
+            if len(selected_aes) >= 2:
+                st.success(
+                    "You selected: " + ", ".join(selected_aes)
+                )
+            else:
+                st.warning(
+                    "Please select at least two AEs for comparison."
+                )
 
