@@ -20,6 +20,11 @@ requirement = st.text_area(
 
 if st.button("Find Potentially Relevant AEs", type="primary"):
     if requirement.strip():
+        st.session_state.search_done = True
+    else:
+        st.session_state.search_done = False
+
+if st.session_state.search_done:
 
         st.success("Search submitted.")
 
@@ -66,5 +71,4 @@ if st.button("Find Potentially Relevant AEs", type="primary"):
         st.write("**Training Experience:** 10 years")
         st.write("**AE Effectiveness:** 96%")
 
-    else:
-        st.warning("Please describe the type of AE you are looking for.")
+
