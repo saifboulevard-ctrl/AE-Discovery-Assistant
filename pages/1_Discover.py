@@ -1,5 +1,7 @@
 import streamlit as st
-
+# Initialise search state
+if "search_done" not in st.session_state:
+    st.session_state["search_done"] = False
 st.title("Discover AEs")
 
 st.write(
@@ -22,7 +24,7 @@ if st.button("Find Potentially Relevant AEs", type="primary"):
     if requirement.strip():
         st.session_state.search_done = True
     else:
-        st.session_state.search_done = False
+        if st.session_state.get("search_done", False):
 
 if st.session_state.search_done:
 
