@@ -22,11 +22,12 @@ requirement = st.text_area(
 
 if st.button("Find Potentially Relevant AEs", type="primary"):
     if requirement.strip():
-        st.session_state.search_done = True
+        st.session_state["search_done"] = True
     else:
-        if st.session_state.get("search_done", False):
+        st.session_state["search_done"] = False
+        st.warning("Please describe the type of AE you are looking for.")
 
-if st.session_state.search_done:
+if st.session_state.get("search_done", False):
 
         st.success("Search submitted.")
 
